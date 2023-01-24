@@ -21,6 +21,7 @@ pipeline {
                 echo "Env URL is ${ENV_URL}"
             }
         }
+    }
 
         stage('Three') {
             steps {
