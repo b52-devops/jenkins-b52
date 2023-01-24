@@ -6,25 +6,23 @@ pipeline {
     }
 
     stages {
-        stage('One'){
+        stage('One') {
             steps {
                 echo "I am stage One"
                 echo "Env URL is ${ENV_URL}"
             }
         }
 
-        stage('Two'){
+        stage('Two') {
                 environment {                           // Declaring at stage will allow only that stages to access that variable
                     ENV_URL = "stage2.global.com"
-                    echo "Env URL is ${ENV_URL}"
-
             steps {
                 echo "I am stage Two"
-                echo ""
+                echo "Env URL is ${ENV_URL}"
             }
         }
 
-        stage('Three'){
+        stage('Three') {
             steps {
                     sh '''
                         echo hello World
