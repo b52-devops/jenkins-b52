@@ -16,12 +16,12 @@ pipeline {
         stage('Two') {
             environment {                           // Declaring at stage will allow only that stages to access that variable
                 ENV_URL = "stage2.global.com"
+            }
             steps {
                 echo "I am stage Two"
                 echo "Env URL is ${ENV_URL}"
             }
         }
-    }
 
         stage('Three') {
             steps {
