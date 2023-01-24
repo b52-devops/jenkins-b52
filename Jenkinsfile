@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     environment {                           // Declaring at Pipeline will allow all the stages to access this variable
-        ENV_URL = "pipeline.global.com"
+        ENV_URL  = "pipeline.global.com"
+        SSH_CRED = credentials('SSH_CRED') 
     }
 
     stages {
