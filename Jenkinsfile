@@ -25,11 +25,12 @@ pipeline {
 
         stage('Three') {
             steps {
-                    sh '''
-                        echo hello World
-                        echo Hai World
-                        echo I am using Pipeline Syntax Generator
-                    '''
+                sh '''
+                    echo hello World
+                    echo Hai World
+                    echo I am using Pipeline Syntax Generator
+                    env
+                '''
             }
         }
 
