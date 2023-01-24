@@ -16,8 +16,12 @@ pipeline {
 
         stage('Three'){
             steps {
-                echo "I am stage Three"
-            }
+                    sh '''
+                        echo hello World
+                        echo Hai World
+                        echo I am using Pipeline Syntax Generator
+                    '''
+                }
         }
 
     }
